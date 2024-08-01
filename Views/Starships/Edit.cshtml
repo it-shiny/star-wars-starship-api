@@ -1,0 +1,69 @@
+@model StarWarsAPI.Models.Starship
+
+@{
+    ViewData["Title"] = "Edit Starship";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Edit Starship</h1>
+
+    <form asp-action="Edit">
+        <input type="hidden" asp-for="Id" />
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" placeholder="Enter starship name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label asp-for="Model" class="form-label"></label>
+                    <input asp-for="Model" class="form-control" placeholder="Enter model" />
+                    <span asp-validation-for="Model" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label asp-for="Manufacturer" class="form-label"></label>
+                    <input asp-for="Manufacturer" class="form-control" placeholder="Enter manufacturer" />
+                    <span asp-validation-for="Manufacturer" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label asp-for="CostInCredits" class="form-label"></label>
+                    <input asp-for="CostInCredits" class="form-control" placeholder="Enter cost in credits" />
+                    <span asp-validation-for="CostInCredits" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label asp-for="Crew" class="form-label"></label>
+                    <input asp-for="Crew" class="form-control" placeholder="Enter crew size" />
+                    <span asp-validation-for="Crew" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label asp-for="Passengers" class="form-label"></label>
+                    <input asp-for="Passengers" class="form-control" placeholder="Enter number of passengers" />
+                    <span asp-validation-for="Passengers" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="form-group">
+                    <label asp-for="StarshipClass" class="form-label"></label>
+                    <input asp-for="StarshipClass" class="form-control" placeholder="Enter starship class" />
+                    <span asp-validation-for="StarshipClass" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,47 @@
+# .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.sln.docstates
+*.dbmdl
+*.jfm
+*.log
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuget
+packages/
+*.vs/
+*.config
+*.pidb
+*.suo
+*.user
+*.suo
+*.cache
+*.csproj.user
+*.dbmdl
+*.jfm
+*.log
+*.pdb
+*.exe
+*.dll
+
+# Rider
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Windows-specific
+*.DS_Store
+Thumbs.db

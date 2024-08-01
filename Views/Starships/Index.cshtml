@@ -1,0 +1,61 @@
+@model StarWarsAPI.Models.Starship
+
+@{
+    ViewData["Title"] = "Starship Details";
+}
+
+<div class="container mt-4">
+    <h1>@Model?.Name</h1>
+
+    @if (Model != null)
+    {
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name</h5>
+                <dl class="row">
+                    <dt class="col-sm-4">Model</dt>
+                    <dd class="col-sm-8">@Model.Model</dd>
+
+                    <dt class="col-sm-4">Manufacturer</dt>
+                    <dd class="col-sm-8">@Model.Manufacturer</dd>
+
+                    <dt class="col-sm-4">Cost in Credits</dt>
+                    <dd class="col-sm-8">@Model.CostInCredits</dd>
+
+                    <dt class="col-sm-4">Length</dt>
+                    <dd class="col-sm-8">@Model.Length</dd>
+
+                    <dt class="col-sm-4">Max Atmosphering Speed</dt>
+                    <dd class="col-sm-8">@Model.MaxAtmospheringSpeed</dd>
+
+                    <dt class="col-sm-4">Crew</dt>
+                    <dd class="col-sm-8">@Model.Crew</dd>
+
+                    <dt class="col-sm-4">Passengers</dt>
+                    <dd class="col-sm-8">@Model.Passengers</dd>
+
+                    <dt class="col-sm-4">Cargo Capacity</dt>
+                    <dd class="col-sm-8">@Model.CargoCapacity</dd>
+
+                    <dt class="col-sm-4">Consumables</dt>
+                    <dd class="col-sm-8">@Model.Consumables</dd>
+
+                    <dt class="col-sm-4">Hyperdrive Rating</dt>
+                    <dd class="col-sm-8">@Model.HyperdriveRating</dd>
+
+                    <dt class="col-sm-4">MGLT</dt>
+                    <dd class="col-sm-8">@Model.MGLT</dd>
+
+                    <dt class="col-sm-4">Starship Class</dt>
+                    <dd class="col-sm-8">@Model.StarshipClass</dd>
+                </dl>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p class="alert alert-warning">No starship data available.</p>
+    }
+
+    <a href="@Url.Action("List")" class="btn btn-primary">Back to List</a>
+</div>
